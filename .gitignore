@@ -5,6 +5,10 @@ work
 tmp-pdf
 assets/assets
 public/portfolio.pdf
+public/resume.pdf
+portfolio.pdf
+resume.pdf
+tmp-pdf
 .DS_Store
 .env
 .env.local

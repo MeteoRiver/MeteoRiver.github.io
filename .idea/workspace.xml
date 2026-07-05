@@ -4,29 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81a6709b-b2b9-44e8-be12-62ff2dd51990" name="Changes" comment="feat: 불필요 파일 제거">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="81a6709b-b2b9-44e8-be12-62ff2dd51990" name="Changes" comment="feat: 내 정보 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-D3LMnw-O.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-DZi4DGXv.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-DtHjBzQ9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-DyF_utme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-ydOgZ6QT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/resume.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/resume.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/AppLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/AppLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/profile.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/about/AboutPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/about/AboutPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/BlogPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/BlogPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/contact/ContactPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/contact/ContactPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/home/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/projects/ProjectDetailPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/projects/ProjectDetailPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/projects/ProjectsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/projects/ProjectsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/resume/ResumePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/resume/ResumePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/skills/SkillsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/skills/SkillsPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useBlogPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useBlogPosts.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783257107446</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: 내 정보 추가">
+      <option name="closed" value="true" />
+      <created>1783260635154</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1783260635154</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,6 +98,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: 홈페이지 셋팅" />
     <MESSAGE value="feat: 불필요 파일 제거" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 불필요 파일 제거" />
+    <MESSAGE value="feat: 내 정보 입력" />
+    <MESSAGE value="feat: 내 정보 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 내 정보 추가" />
   </component>
 </project>
