@@ -1,18 +1,18 @@
 import {
+  Award,
   BookOpen,
-  Bot,
   Braces,
+  Building2,
   Cloud,
   Code2,
   Container,
   Database,
   Github,
-  Globe,
-  Layers3,
-  Linkedin,
+  KeyRound,
   Mail,
   Network,
   Server,
+  ShieldCheck,
   TerminalSquare,
   Workflow,
 } from 'lucide-react';
@@ -20,14 +20,13 @@ import type { BlogPost, NavItem, Project, ResumeSection, SkillGroup, SocialLink 
 
 export const siteConfig = {
   name: '강은석',
-  title: 'Developer Hub',
-  headline: '백엔드와 AI Agent를 공부하는 개발자 강은석입니다.',
-  focus: 'Java / Spring Boot / AI Agent / Docker',
-  email: 'hello@gdeom.dev',
-  githubUrl: 'https://github.com/gdeom',
-  blogUrl: 'https://gdeom.tistory.com',
-  resumePdfUrl: '/resume.pdf',
-  domain: 'https://gdeom.dev',
+  title: 'Back-End Engineer',
+  headline: '소통과 책임을 바탕으로 성장하는 Java/Spring 백엔드 개발자입니다.',
+  focus: 'Java / Spring Boot / MSA / DevOps',
+  email: 'dmseordl@naver.com',
+  githubUrl: 'https://github.com/MeteoRiver',
+  blogUrl: 'https://archiventum.tistory.com/',
+  domain: 'https://meteoriver.github.io',
 };
 
 export const navItems: NavItem[] = [
@@ -43,177 +42,268 @@ export const socialLinks: SocialLink[] = [
   { label: 'GitHub', href: siteConfig.githubUrl, icon: Github },
   { label: 'Blog', href: siteConfig.blogUrl, icon: BookOpen },
   { label: 'Email', href: `mailto:${siteConfig.email}`, icon: Mail },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com', icon: Linkedin },
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
     title: 'Backend',
-    description: '도메인 모델링, API 설계, 데이터 흐름을 안정적으로 다루는 영역입니다.',
+    description: 'Spring Boot 기반의 API, 인증/인가, 데이터 모델링과 서비스 로직 구현에 집중해 왔습니다.',
     items: [
       { name: 'Java', icon: Code2 },
       { name: 'Spring Boot', icon: Server },
-      { name: 'JPA', icon: Layers3 },
-      { name: 'MySQL', icon: Database },
+      { name: 'Spring MVC', icon: Braces },
+      { name: 'Spring Security', icon: ShieldCheck },
+      { name: 'Spring Data JPA', icon: Database },
+      { name: 'QueryDSL', icon: TerminalSquare },
     ],
   },
   {
-    title: 'Frontend',
-    description: '포트폴리오와 데모를 직접 표현하기 위한 인터페이스 역량입니다.',
+    title: 'Data & Messaging',
+    description: '서비스 성격에 맞게 RDB, 캐시, 문서형 저장소를 나누어 사용하고 정합성을 중요하게 봅니다.',
     items: [
-      { name: 'React', icon: Braces },
-      { name: 'TypeScript', icon: TerminalSquare },
+      { name: 'MySQL', icon: Database },
+      { name: 'Redis', icon: Database },
+      { name: 'MongoDB', icon: Database },
+      { name: 'Flyway', icon: Workflow },
     ],
   },
   {
-    title: 'DevOps',
-    description: '배포 자동화와 운영 환경을 이해하며 서비스를 끝까지 연결합니다.',
+    title: 'Cloud & DevOps',
+    description: 'Docker, Jenkins, 클라우드 환경을 활용해 배포 자동화와 실행 환경 표준화를 경험했습니다.',
     items: [
       { name: 'Docker', icon: Container },
-      { name: 'GitHub Actions', icon: Workflow },
-      { name: 'Linux', icon: TerminalSquare },
-      { name: 'GCP', icon: Cloud },
+      { name: 'Jenkins', icon: Workflow },
+      { name: 'Nginx', icon: Network },
+      { name: 'Naver Cloud', icon: Cloud },
+      { name: 'Kubernetes', icon: Cloud },
+      { name: 'GitHub Actions', icon: Github },
     ],
   },
   {
-    title: 'AI',
-    description: '에이전트가 도구를 쓰고 상태를 이어가는 구조에 관심이 있습니다.',
+    title: 'Architecture & Security',
+    description: 'MSA, API Gateway, 서비스 디스커버리, JWT/OAuth2, 암호화 흐름 설계 경험을 쌓고 있습니다.',
     items: [
-      { name: 'LangGraph', icon: Network },
-      { name: 'MCP', icon: Globe },
-      { name: 'Agentic Workflow', icon: Bot },
+      { name: 'Spring Cloud', icon: Cloud },
+      { name: 'Eureka', icon: Network },
+      { name: 'WebFlux', icon: Workflow },
+      { name: 'JWT', icon: KeyRound },
+      { name: 'OAuth2', icon: ShieldCheck },
+      { name: 'ECDSA/RSA', icon: KeyRound },
     ],
   },
 ];
 
 export const projects: Project[] = [
   {
-    id: 'agent-workflow-lab',
-    title: 'Agent Workflow Lab',
-    summary: 'LangGraph와 MCP를 이용해 반복 업무를 에이전트 플로우로 실험하는 연구형 프로젝트',
+    id: 'paranmanzang',
+    title: 'Paranmanzang',
+    summary: '독서 소모임을 위한 공간 대여, 결제, 채팅 서비스를 MSA와 비동기 구조로 구현한 프로젝트입니다.',
     description:
-      'AI Agent가 외부 도구를 호출하고 작업 상태를 이어가며 사용자 요청을 처리하는 방식을 작은 실험 단위로 검증합니다.',
+      '사용자와 판매자가 공간을 등록하고 예약/결제할 수 있으며, 소모임원 간 채팅까지 지원하는 독서 소모임 공간 대여 서비스입니다. Spring Cloud 기반 MSA 구조와 Docker/Jenkins 배포 파이프라인을 경험했습니다.',
     problem:
-      '단순 챗봇은 장기 작업, 도구 호출, 실패 복구를 다루기 어렵기 때문에 실제 업무 자동화에는 구조적인 한계가 있습니다.',
+      '공간 대여 서비스는 사용자, 판매자, 결제, 채팅 등 도메인이 분리되어 있고 인증과 데이터 저장소 요구가 달라 단일 구조로 관리하기 어려웠습니다.',
     solution:
-      '상태 그래프를 중심으로 노드를 분리하고, MCP 도구 호출 계층을 별도로 두어 관찰 가능성과 재사용성을 높였습니다.',
-    architecture: ['React 데모 화면', 'Spring Boot API', 'LangGraph Orchestrator', 'MCP Tool Server'],
+      'Config Server, Eureka, Gateway를 중심으로 서비스를 분리하고, JWT/OAuth2 인증, MySQL/MongoDB/Redis 저장소, WebFlux 기반 비동기 흐름을 적용했습니다. Jenkins와 Docker Hub를 연동해 자동 빌드/배포를 구성했습니다.',
+    architecture: ['Spring Cloud MSA', 'Eureka Service Discovery', 'Gateway API Routing', 'Docker/Jenkins CI/CD'],
     retrospective:
-      '에이전트의 품질은 모델 성능만이 아니라 상태 설계, 도구 계약, 실패 시 재시도 정책에서 크게 갈린다는 점을 배웠습니다.',
-    techStack: ['Java', 'Spring Boot', 'LangGraph', 'MCP', 'Docker'],
-    githubUrl: 'https://github.com/gdeom',
-    status: 'In Progress',
-  },
-  {
-    id: 'portfolio-hub',
-    title: 'Developer Hub',
-    summary: '프로젝트, 이력서, 티스토리 블로그를 연결하는 개인 개발자 허브',
-    description:
-      '채용 담당자와 협업자가 3분 안에 기술 방향, 프로젝트, 꾸준한 학습 기록을 파악할 수 있도록 설계한 포트폴리오입니다.',
-    problem:
-      '이력서, GitHub, 블로그가 흩어져 있으면 개발자의 방향성과 최근 활동을 빠르게 파악하기 어렵습니다.',
-    solution:
-      '포트폴리오를 중심에 두고 티스토리 RSS, 프로젝트 상세, 이력서 다운로드를 한 흐름 안에 배치했습니다.',
-    architecture: ['Vite Static App', 'React Router Pages', 'Tistory RSS Integration', 'GitHub Pages Deploy'],
-    retrospective:
-      '정적 사이트라도 데이터와 화면을 분리하면 향후 GitHub 활동, 코딩테스트, 서비스 링크를 자연스럽게 확장할 수 있습니다.',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'GitHub Actions'],
-    githubUrl: 'https://github.com/gdeom',
-    demoUrl: 'https://gdeom.dev',
+      'MSA는 기술 선택보다 서비스 경계와 운영 흐름을 이해하는 일이 더 중요하다는 점을 배웠습니다. 배포 자동화와 인증 흐름을 직접 다루며 백엔드 운영 관점의 감각을 넓혔습니다.',
+    techStack: ['Java', 'Spring Boot', 'Spring Cloud', 'JPA', 'MongoDB', 'Redis', 'Docker', 'Jenkins'],
+    githubUrl: 'https://github.com/MeteoRiver/paran_msa',
     status: 'Completed',
   },
   {
-    id: 'spring-api-starter',
-    title: 'Spring API Starter',
-    summary: '인증, 예외 처리, 배포 자동화를 포함한 백엔드 API 스타터 템플릿',
+    id: 'lodging-commander',
+    title: 'LodgingCommander',
+    summary: '호텔 숙박 예약과 결제를 제공하는 Spring Boot 기반 숙박 서비스입니다.',
     description:
-      '새로운 백엔드 프로젝트를 빠르게 시작하기 위해 공통 설정과 운영에 필요한 기본기를 모듈화합니다.',
+      '호텔 등록, 예약, 결제, 지도 주소 검색을 포함한 숙박 서비스입니다. Spring Security, JWT, OAuth2 인증과 MySQL/Redis 기반 데이터 처리를 담당했습니다.',
     problem:
-      '매번 인증, 전역 예외, 로깅, 배포 설정을 반복해서 구성하면 실험 속도가 느려집니다.',
+      '숙박 서비스는 예약 데이터, 사용자 인증, 외부 지도 API, 결제 흐름이 함께 얽혀 있어 안정적인 계층 분리와 인증 처리가 필요했습니다.',
     solution:
-      '공통 관심사를 템플릿화하고 Docker 및 GitHub Actions 기반의 기본 배포 흐름을 포함했습니다.',
-    architecture: ['Spring Boot', 'MySQL', 'Docker Compose', 'GitHub Actions'],
+      'Spring MVC 구조로 API를 설계하고, Spring Security와 JWT/OAuth2로 인증/인가를 구현했습니다. 지도 API와 주소 검색을 연동해 호텔 위치 정보를 사용자 흐름에 연결했습니다.',
+    architecture: ['Spring Boot Monolith', 'Spring Security Auth', 'MySQL/Redis Data Layer', 'React Client'],
     retrospective:
-      '반복되는 설정을 줄이는 것은 단순 편의가 아니라 더 자주 실험하고 더 빠르게 학습하기 위한 기반입니다.',
-    techStack: ['Java', 'Spring Boot', 'JPA', 'MySQL', 'Docker'],
-    githubUrl: 'https://github.com/gdeom',
-    status: 'Planning',
+      '짧은 기간의 프로젝트였지만 인증 흐름과 외부 API 연동, 예약 도메인의 상태 관리를 실제 서비스 형태로 연결해보는 경험을 했습니다.',
+    techStack: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'OAuth2', 'MySQL', 'Redis', 'Docker'],
+    githubUrl: 'https://github.com/MeteoRiver/LodgingCommander',
+    status: 'Completed',
+  },
+  {
+    id: 'semo-crypto',
+    title: 'SEMO Crypto Test Service',
+    summary: '업무 프로젝트에서 키 발급, 인코딩, 암호 알고리즘 검증을 다루는 암호화 테스트 서비스입니다.',
+    description:
+      'Hash, ECC, RSA 기능을 계층형 구조로 모듈화하고 BouncyCastle 기반 Crypto Provider를 추상화해 알고리즘 확장 가능성을 고려한 서비스입니다.',
+    problem:
+      '암호 알고리즘 검증은 잘못된 곡선 입력, 인코딩 오류, 키 포맷 차이 등 예외 케이스가 많아 일관된 구조와 검증 흐름이 필요했습니다.',
+    solution:
+      'Controller, Service, Crypto Layer로 책임을 나누고 ECC 공개키 압축/비압축 포맷, ECDSA 전자서명 검증, RSA-OAEP 암복호화, 처리 시간 측정 기능을 구현했습니다.',
+    architecture: ['Controller Layer', 'Service Layer', 'Crypto Provider Abstraction', 'Common Exception Handling'],
+    retrospective:
+      '보안 도메인은 구현 자체보다 명확한 입력 검증, 실패 처리, 알고리즘 교체가 가능한 구조가 중요하다는 점을 체감했습니다.',
+    techStack: ['Java', 'Spring Boot', 'BouncyCastle', 'ECDSA', 'RSA-OAEP', 'REST API'],
+    githubUrl: siteConfig.githubUrl,
+    status: 'In Progress',
+  },
+  {
+    id: 'mbiz-refactor',
+    title: 'M-biz Refactoring',
+    summary: '업무, 거래명세서, 입금계산서, 세금 흐름을 상태 기반 프로세스로 정리한 시스템 리팩토링입니다.',
+    description:
+      '분산된 업무 흐름을 거래명세서 중심 상태 기반 프로세스로 통합하고, 댓글/파일 첨부/메일 알림/통계/권한 구조를 개선했습니다.',
+    problem:
+      '업무 단위가 분산되어 데이터 관계가 복잡하고, 권한 단계와 삭제 정책이 명시적이지 않아 유지보수와 이력 추적이 어려웠습니다.',
+    solution:
+      '도메인 구조와 연관관계를 재설계하고 명시적 권한 컬럼, Soft Delete, Flyway 마이그레이션, RestAssured 통합 테스트를 도입했습니다. 파일 업로드 제한과 상대 경로 보존 문제를 운영 환경 기준으로 개선했습니다.',
+    architecture: ['Domain Refactoring', 'State Based Process', 'Flyway Migration', 'RestAssured Integration Test'],
+    retrospective:
+      '기존 기능을 유지하면서 구조를 바꾸는 일은 새 기능 개발보다 더 많은 맥락 이해가 필요했습니다. 데이터 정합성과 운영 이슈를 함께 보는 관점을 배웠습니다.',
+    techStack: ['Java', 'Spring Boot', 'JPA', 'Docker', 'Flyway', 'RestAssured'],
+    githubUrl: siteConfig.githubUrl,
+    status: 'In Progress',
+  },
+  {
+    id: 'iot-smart-system',
+    title: 'IoT Smart System',
+    summary: 'OpenCV, Firebase, Android, Arduino를 연동한 인공지능 기반 스마트 IoT 시스템입니다.',
+    description:
+      '카메라 영상을 실시간 처리하고 결과를 Arduino로 전달해 스마트 공기청정기 동작을 제어하는 학부 종합설계 프로젝트입니다.',
+    problem:
+      '영상 처리 결과를 모바일 앱, Firebase, Arduino 장치와 연결해야 해 하드웨어와 소프트웨어 간 안정적인 데이터 흐름이 필요했습니다.',
+    solution:
+      'Android Studio와 Java로 앱을 구현하고 Firebase로 업로드 결과와 장치 제어 흐름을 연결했습니다. Arduino는 C++ 기반으로 제어 로직을 구현했습니다.',
+    architecture: ['Android App', 'Firebase Integration', 'OpenCV Processing', 'Arduino Control'],
+    retrospective:
+      '소프트웨어가 실제 장치 동작으로 이어지는 경험을 통해 입력, 처리, 출력 흐름을 끝까지 검증하는 습관을 익혔습니다.',
+    techStack: ['Java', 'Android Studio', 'Firebase', 'Arduino', 'C++', 'OpenCV'],
+    githubUrl: siteConfig.githubUrl,
+    status: 'Completed',
   },
 ];
 
 export const fallbackBlogPosts: BlogPost[] = [
   {
-    title: 'Spring Boot 프로젝트에서 예외 처리를 정리하는 방법',
+    title: 'Spring Security와 JWT 인증 흐름 정리',
     url: siteConfig.blogUrl,
-    publishedAt: '2026-06-20',
-    tags: ['Spring Boot', 'Backend'],
-    summary: '컨트롤러, 서비스, 공통 응답 구조를 기준으로 예외 처리를 일관되게 설계한 기록입니다.',
+    publishedAt: 'Latest',
+    tags: ['Spring Security', 'JWT'],
+    summary: '백엔드 인증/인가를 공부하며 토큰 기반 인증 흐름과 보안 고려사항을 정리합니다.',
   },
   {
-    title: 'AI Agent를 공부하며 정리한 LangGraph 핵심 개념',
+    title: 'Docker와 Jenkins로 배포 자동화하기',
     url: siteConfig.blogUrl,
-    publishedAt: '2026-06-05',
-    tags: ['AI Agent', 'LangGraph'],
-    summary: '상태 그래프, 노드, 엣지, 도구 호출 흐름을 작은 예제로 이해한 내용을 정리했습니다.',
+    publishedAt: 'Archive',
+    tags: ['Docker', 'Jenkins', 'DevOps'],
+    summary: '프로젝트에서 경험한 컨테이너 빌드, 이미지 배포, CI/CD 파이프라인 구성을 기록합니다.',
   },
   {
-    title: 'Docker Compose로 로컬 개발 환경 맞추기',
+    title: 'MSA 프로젝트에서 서비스 경계 나누기',
     url: siteConfig.blogUrl,
-    publishedAt: '2026-05-28',
-    tags: ['Docker', 'DevOps'],
-    summary: 'MySQL과 애플리케이션 서버를 같은 규칙으로 실행해 팀 환경 차이를 줄인 경험입니다.',
+    publishedAt: 'Archive',
+    tags: ['MSA', 'Spring Cloud'],
+    summary: 'Eureka, Gateway, Config Server를 사용하며 배운 서비스 분리와 운영 흐름을 정리합니다.',
   },
 ];
 
 export const resumeSections: ResumeSection[] = [
   {
+    title: '업무 경험',
+    items: [
+      {
+        title: '뮤토스마트 Backend Developer',
+        meta: '2025.07 - Present',
+        description:
+          'SEMO 암호화 테스트 서비스, M-biz 리팩토링, PODO 인증/암호화 흐름 설계 등 Java/Spring 기반 백엔드 업무를 수행하고 있습니다.',
+      },
+    ],
+  },
+  {
+    title: '교육',
+    items: [
+      {
+        title: '네이버 클라우드 데브옵스 13기',
+        meta: '2024.04 - 2024.11',
+        description:
+          'Java, Spring Boot, Spring Security, JPA, Spring Cloud, Docker, Jenkins, MySQL, Eureka를 학습하고 팀 프로젝트에 적용했습니다.',
+      },
+      {
+        title: '항해99 클럽 스터디 3기',
+        meta: '2024.07 - 2024.08',
+        description: 'Java 기반 알고리즘 문제 해결 능력을 꾸준히 강화했습니다.',
+      },
+    ],
+  },
+  {
     title: '학력',
     items: [
       {
-        title: 'Computer Science',
-        meta: '학사 과정 또는 최종 학력 입력',
-        description: '자료구조, 데이터베이스, 운영체제, 네트워크 등 백엔드 기반 과목을 중심으로 학습했습니다.',
+        title: '홍익대학교 세종캠퍼스 소프트웨어융합학과',
+        meta: '2018.03 - 2024.08 | GPA 3.83 / 4.5',
+        description: 'Java, 데이터베이스, 웹 개발, IoT 종합설계 프로젝트를 중심으로 소프트웨어 개발 기초를 쌓았습니다.',
+      },
+      {
+        title: '화정고등학교',
+        meta: '2017.02 졸업',
+        description: '문제를 꾸준히 파고드는 학습 태도와 협업의 기본기를 다졌습니다.',
       },
     ],
   },
   {
-    title: '활동',
+    title: '자격 및 수상',
     items: [
       {
-        title: 'Backend & AI Agent Study',
-        meta: '2026 - Present',
-        description: 'Spring Boot 기반 API와 AI Agent 워크플로우를 꾸준히 학습하고 블로그에 기록합니다.',
+        title: '정보처리기사',
+        meta: '2022.11',
+        description: '한국산업인력공단 주관 정보처리기사 자격을 취득했습니다.',
+      },
+      {
+        title: 'NCA / NCP',
+        meta: '2024.11 - 2024.12',
+        description: '네이버 클라우드 관련 자격을 취득하며 클라우드 기반 운영 지식을 보완했습니다.',
+      },
+      {
+        title: 'SQLD',
+        meta: '2025.04',
+        description: 'KDATA 데이터자격검정 SQLD 자격을 취득했습니다.',
+      },
+      {
+        title: '소프트웨어융합학과 학술제 최우수상',
+        meta: '2021.11',
+        description: '홍익대학교 소프트웨어융합학과 학술제에서 종합설계 프로젝트로 최우수상을 수상했습니다.',
       },
     ],
   },
-  {
-    title: '자격증',
-    items: [
-      {
-        title: '자격증 정보를 추가하세요',
-        meta: '취득일',
-        description: '정보처리기사, SQLD, 클라우드 관련 자격증 등 필요 항목을 확장할 수 있습니다.',
-      },
-    ],
-  },
+];
+
+export const careerNarrative = [
+  '의견이 다른 사람들과도 대화를 통해 목표를 맞추고, 효율성과 안정성 사이의 균형점을 찾는 일을 중요하게 생각합니다.',
+  '학부 프로젝트와 팀 프로젝트에서 갈등을 조율하며 기능 완성도와 팀의 속도를 함께 지키는 경험을 쌓았습니다.',
+  '맡은 일의 끝을 구현에서 멈추지 않고 배포, 운영, 장애 가능성, 데이터 정합성까지 이어서 바라보려고 합니다.',
 ];
 
 export const learningNow = [
-  'Spring Boot 기반 API 설계와 운영 친화적인 예외 처리',
-  'LangGraph, MCP를 활용한 Agentic Workflow',
-  'Docker와 GitHub Actions를 이용한 재현 가능한 배포',
-  '기술 블로그를 통한 학습 과정의 문서화',
+  'Spring Boot 기반 인증/인가, 예외 처리, 계층형 API 설계를 더 견고하게 다듬고 있습니다.',
+  'MSA, Spring Cloud, Gateway, Eureka를 활용한 서비스 분리와 운영 흐름을 학습하고 있습니다.',
+  'Docker, Jenkins, GitHub Actions를 통해 반복 가능한 배포 환경을 만드는 데 관심이 있습니다.',
+  '암호화, 전자서명, 요청 무결성 검증처럼 보안과 백엔드가 만나는 지점을 업무에서 익히고 있습니다.',
 ];
 
 export const principles = [
-  '작게 만들고 빠르게 검증합니다.',
-  '기능보다 먼저 문제와 사용 흐름을 이해합니다.',
-  '코드는 다음 작업자가 읽을 수 있는 형태를 지향합니다.',
-  '배포와 운영까지 이어지는 개발 경험을 중요하게 봅니다.',
+  '좋은 서비스는 소통과 협업에서 시작한다고 믿습니다.',
+  '맡은 일은 끝까지 책임지고, 문제가 생기면 빠르게 원인을 찾고 개선합니다.',
+  '기능 구현뿐 아니라 배포, 운영, 역할 분담까지 이어지는 개발 경험을 중요하게 봅니다.',
+  '지속적인 학습과 기록을 통해 어제보다 나은 백엔드 개발자로 성장하려 합니다.',
 ];
 
 export const quickStats = [
-  { label: 'Focus', value: 'Backend + AI' },
-  { label: 'Main Stack', value: 'Java / Spring' },
-  { label: 'Learning Log', value: 'Tistory RSS' },
+  { label: 'Role', value: 'Back-End Engineer' },
+  { label: 'Main Stack', value: 'Java / Spring Boot' },
+  { label: 'Project Focus', value: 'MSA / Auth / DevOps' },
+  { label: 'Experience', value: 'Team Projects + Backend Work' },
+];
+
+export const highlights = [
+  { label: 'Education', value: '홍익대학교 소프트웨어융합학과', icon: Award },
+  { label: 'Cloud Training', value: '네이버 클라우드 데브옵스 13기', icon: Cloud },
+  { label: 'Current Work', value: '뮤토스마트 Backend Developer', icon: Building2 },
 ];

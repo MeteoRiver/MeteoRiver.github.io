@@ -15,8 +15,8 @@ export function BlogPage() {
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             eyebrow="Blog"
-            title="블로그는 티스토리를 유지하고 최신 글만 연결합니다."
-            description="홈페이지는 포트폴리오 허브 역할에 집중하고, 학습 기록은 티스토리 원문으로 이동합니다."
+            title="학습과 프로젝트 기록은 Archiventum 블로그에 남기고 있습니다."
+            description="Spring, DevOps, 프로젝트 회고처럼 백엔드 개발자로 성장하며 정리한 글을 연결합니다."
           />
           <ButtonLink href={siteConfig.blogUrl} external icon={<BookOpen className="h-4 w-4" />}>
             전체 글 보기
@@ -25,7 +25,11 @@ export function BlogPage() {
 
         <div className="mt-8 flex min-h-12 items-center gap-3 rounded-lg border border-ink-200 bg-white px-4 text-sm text-ink-600 dark:border-ink-800 dark:bg-ink-900 dark:text-ink-300">
           <Rss className="h-4 w-4 text-mint-600 dark:text-mint-400" />
-          {isLoading ? '티스토리 RSS를 불러오는 중입니다.' : source === 'rss' ? '티스토리 RSS에서 최신 글을 표시 중입니다.' : error ?? 'RSS 주소 연결 전 예시 글을 표시합니다.'}
+          {isLoading
+            ? '티스토리 RSS를 불러오는 중입니다.'
+            : source === 'rss'
+              ? '티스토리 RSS에서 최신 글을 표시 중입니다.'
+              : error ?? 'RSS 연결이 어려워 임시 글을 표시합니다.'}
         </div>
 
         <div className="mt-6 grid gap-4">

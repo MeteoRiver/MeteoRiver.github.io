@@ -10,10 +10,10 @@ export function ContactPage() {
         <SectionHeader
           eyebrow="Contact"
           title="프로젝트, 협업, 채용 관련 연락을 환영합니다."
-          description="GitHub에서 코드를 확인하고, 티스토리에서 학습 기록을 살펴본 뒤 이메일로 편하게 연락할 수 있습니다."
+          description="GitHub에서 코드를 확인하고, Archiventum 블로그에서 학습 기록을 볼 수 있습니다. 이메일로도 편하게 연락 주세요."
         />
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {socialLinks.map((link) => {
             const Icon = link.icon;
             return (

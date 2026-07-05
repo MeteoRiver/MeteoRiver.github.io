@@ -11,8 +11,8 @@ export function ProjectsPage() {
       <section className="page-shell">
         <SectionHeader
           eyebrow="Projects"
-          title="프로젝트는 결과보다 문제 해결 과정을 보여주는 공간입니다."
-          description="각 프로젝트는 소개, 문제점, 해결 과정, 아키텍처, 회고를 기록할 수 있도록 설계했습니다."
+          title="결과보다 어떤 문제를 어떻게 풀었는지 보여주는 공간입니다."
+          description="포트폴리오 프로젝트, 업무 프로젝트, 학부 프로젝트를 백엔드 개발 관점에서 정리했습니다."
         />
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -29,13 +29,13 @@ export function ProjectsPage() {
               </div>
               <p className="mt-3 flex-1 text-sm leading-6 text-ink-600 dark:text-ink-300">{project.summary}</p>
               <div className="mt-5 flex flex-wrap gap-2">
-                {project.techStack.map((tech) => (
+                {project.techStack.slice(0, 6).map((tech) => (
                   <Tag key={tech}>{tech}</Tag>
                 ))}
               </div>
               <div className="mt-6 flex flex-wrap gap-2">
                 <ButtonLink href={`/projects/${project.id}`} variant="primary">
-                  상세 보기
+                  자세히 보기
                 </ButtonLink>
                 <ButtonLink href={project.githubUrl} external icon={<Github className="h-4 w-4" />}>
                   GitHub

@@ -1,9 +1,9 @@
-import { Download, FileText } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import { ButtonLink } from '../../components/ui/ButtonLink';
 import { PageTransition } from '../../components/ui/PageTransition';
 import { SectionHeader } from '../../components/ui/SectionHeader';
 import { Tag } from '../../components/ui/Tag';
-import { projects, resumeSections, siteConfig, skillGroups } from '../../data/profile';
+import { careerNarrative, projects, resumeSections, skillGroups } from '../../data/profile';
 
 export function ResumePage() {
   const skills = skillGroups.flatMap((group) => group.items.map((item) => item.name));
@@ -14,16 +14,27 @@ export function ResumePage() {
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             eyebrow="Resume"
-            title="이력서는 요약하고, 프로젝트에서 맥락을 보여줍니다."
-            description="학력, 활동, 자격증, 프로젝트, 기술 스택을 한 화면에 정리하고 PDF 다운로드를 제공하는 구조입니다."
+            title="이력서의 내용을 웹 페이지 안에서 바로 읽을 수 있게 정리했습니다."
+            description="경력, 교육, 자격, 수상, 프로젝트 경험을 백엔드 개발자로 성장해 온 흐름에 맞춰 담았습니다."
           />
-          <ButtonLink href={siteConfig.resumePdfUrl} external variant="primary" icon={<Download className="h-4 w-4" />}>
-            PDF 다운로드
+          <ButtonLink href="/contact" variant="primary" icon={<FileText className="h-4 w-4" />}>
+            연락하기
           </ButtonLink>
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_320px]">
           <div className="grid gap-5">
+            <section className="rounded-lg border border-ink-200 bg-white p-6 dark:border-ink-800 dark:bg-ink-900">
+              <h2 className="text-lg font-semibold text-ink-950 dark:text-white">소개</h2>
+              <div className="mt-5 grid gap-3">
+                {careerNarrative.map((item) => (
+                  <p key={item} className="rounded-md bg-ink-50 p-4 text-sm leading-6 text-ink-700 dark:bg-ink-800 dark:text-ink-200">
+                    {item}
+                  </p>
+                ))}
+              </div>
+            </section>
+
             {resumeSections.map((section) => (
               <section key={section.title} className="rounded-lg border border-ink-200 bg-white p-6 dark:border-ink-800 dark:bg-ink-900">
                 <h2 className="text-lg font-semibold text-ink-950 dark:text-white">{section.title}</h2>
@@ -40,7 +51,7 @@ export function ResumePage() {
             ))}
 
             <section className="rounded-lg border border-ink-200 bg-white p-6 dark:border-ink-800 dark:bg-ink-900">
-              <h2 className="text-lg font-semibold text-ink-950 dark:text-white">프로젝트</h2>
+              <h2 className="text-lg font-semibold text-ink-950 dark:text-white">프로젝트 경험</h2>
               <div className="mt-5 grid gap-4">
                 {projects.map((project) => (
                   <article key={project.id}>

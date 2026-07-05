@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gdeom.dev/sitemap.xml
+Sitemap: https://meteoriver.github.io/sitemap.xml

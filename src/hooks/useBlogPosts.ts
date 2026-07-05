@@ -9,7 +9,7 @@ type BlogState = {
   source: 'rss' | 'fallback';
 };
 
-const RSS_URL = import.meta.env.VITE_TISTORY_RSS_URL as string | undefined;
+const RSS_URL = (import.meta.env.VITE_TISTORY_RSS_URL as string | undefined) ?? 'https://archiventum.tistory.com/rss';
 const RSS_PROXY_URL = import.meta.env.VITE_RSS_PROXY_URL as string | undefined;
 
 function getTextContent(item: Element, selector: string) {
@@ -78,7 +78,7 @@ export function useBlogPosts() {
         setState({
           posts: fallbackBlogPosts,
           isLoading: false,
-          error: '티스토리 RSS 연결 전까지 예시 글을 표시합니다.',
+          error: '티스토리 RSS 연결이 어려워 임시 글을 표시합니다.',
           source: 'fallback',
         });
       }

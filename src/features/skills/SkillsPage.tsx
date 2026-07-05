@@ -8,8 +8,8 @@ export function SkillsPage() {
       <section className="page-shell">
         <SectionHeader
           eyebrow="Skills"
-          title="기술은 카테고리보다 연결 방식이 더 중요하다고 생각합니다."
-          description="백엔드 구현, 프론트 표현, 배포 자동화, AI Agent 실험을 하나의 제품 흐름으로 연결하는 데 관심이 있습니다."
+          title="Spring 백엔드 구현부터 배포 자동화와 보안 흐름까지 연결해 경험했습니다."
+          description="이력서와 포트폴리오에 기반해 실제 프로젝트에서 사용한 기술을 중심으로 정리했습니다."
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">

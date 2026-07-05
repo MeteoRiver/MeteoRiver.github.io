@@ -108,7 +108,7 @@ export function AppLayout({ children }: AppLayoutProps) {
 
       <footer className="border-t border-ink-200 dark:border-ink-800">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-8 text-sm text-ink-500 dark:text-ink-400 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p>© 2026 {siteConfig.name}. Built as a developer hub.</p>
+          <p>© 2026 {siteConfig.name}. Back-End Engineer Portfolio.</p>
           <p>{siteConfig.domain}</p>
         </div>
       </footer>

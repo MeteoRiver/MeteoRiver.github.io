@@ -43,10 +43,10 @@ export function ProjectDetailPage() {
             <p className="mt-5 max-w-3xl text-lg leading-8 text-ink-600 dark:text-ink-300">{project.description}</p>
 
             <div className="mt-10 grid gap-5">
-              <DetailBlock title="문제점" body={project.problem} />
+              <DetailBlock title="문제 정의" body={project.problem} />
               <DetailBlock title="해결 과정" body={project.solution} />
               <section className="rounded-lg border border-ink-200 bg-white p-6 dark:border-ink-800 dark:bg-ink-900">
-                <h2 className="text-lg font-semibold text-ink-950 dark:text-white">아키텍처</h2>
+                <h2 className="text-lg font-semibold text-ink-950 dark:text-white">구조</h2>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2">
                   {project.architecture.map((item, index) => (
                     <div key={item} className="rounded-md bg-ink-50 p-4 text-sm font-medium text-ink-700 dark:bg-ink-800 dark:text-ink-200">
@@ -55,7 +55,7 @@ export function ProjectDetailPage() {
                   ))}
                 </div>
               </section>
-              <DetailBlock title="회고" body={project.retrospective} />
+              <DetailBlock title="배운 점" body={project.retrospective} />
             </div>
           </article>
 
