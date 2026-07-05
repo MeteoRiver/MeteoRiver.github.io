@@ -1,0 +1,14 @@
+{
+  "name": "강은석 Developer Hub",
+  "short_name": "gdeom.dev",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#f8fafc",
+  "background_color": "#f8fafc",
+  "display": "standalone"
+}

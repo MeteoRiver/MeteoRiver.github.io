@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.dark body {
+  background: #020617;
+  color: #f8fafc;
+}
+
+::selection {
+  background: rgba(20, 184, 166, 0.28);
+}
+
+@layer components {
+  .page-shell {
+    @apply mx-auto w-full max-w-6xl px-5 py-10 sm:px-6 lg:px-8 lg:py-14;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold tracking-normal text-ink-950 dark:text-white sm:text-3xl;
+  }
+
+  .section-lead {
+    @apply mt-3 max-w-3xl text-base leading-7 text-ink-600 dark:text-ink-300;
+  }
+
+  .focus-ring {
+    @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mint-500;
+  }
+}
