@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81a6709b-b2b9-44e8-be12-62ff2dd51990" name="Changes" comment="refactor: 이력서 페이지 프로젝트 파트 제거">
+    <list default="true" id="81a6709b-b2b9-44e8-be12-62ff2dd51990" name="Changes" comment="refactor: 프로젝트 명 제거">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-C7viyf_x.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-CxCaKcmC.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-CYxfsIs6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-N9qxa9O_.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/build-pages.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build-pages.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/home/HomePage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/resume/ResumePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/resume/ResumePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
       <updated>1783252710398</updated>
       <workItem from="1783252717556" duration="2647000" />
       <workItem from="1783298649261" duration="681000" />
-      <workItem from="1783302858561" duration="4294000" />
+      <workItem from="1783302858561" duration="7731000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 홈페이지 셋팅">
       <option name="closed" value="true" />
@@ -151,7 +150,31 @@
       <option name="project" value="LOCAL" />
       <updated>1783306550306</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactor: 메인 페이지 정리">
+      <option name="closed" value="true" />
+      <created>1783310536878</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1783310536878</updated>
+    </task>
+    <task id="LOCAL-00012" summary="refactor: About 페이지 정리">
+      <option name="closed" value="true" />
+      <created>1783311908191</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1783311908193</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor: 프로젝트 명 제거">
+      <option name="closed" value="true" />
+      <created>1783311983535</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1783311983535</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,7 +190,10 @@
     <MESSAGE value="refactor: 블로그 최신글 가져오기" />
     <MESSAGE value="refactor: 불필요한 설명 제거" />
     <MESSAGE value="refactor: 이력서 페이지 프로젝트 파트 제거" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: 이력서 페이지 프로젝트 파트 제거" />
+    <MESSAGE value="refactor: 메인 페이지 정리" />
+    <MESSAGE value="refactor: About 페이지 정리" />
+    <MESSAGE value="refactor: 프로젝트 명 제거" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: 프로젝트 명 제거" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

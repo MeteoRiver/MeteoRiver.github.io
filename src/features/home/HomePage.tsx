@@ -4,6 +4,43 @@ import { PageTransition } from '../../components/ui/PageTransition';
 import { Tag } from '../../components/ui/Tag';
 import { highlights, siteConfig } from '../../data/profile';
 
+const timelineTicks = ['14', '16', '18', '20', '22', '24', '26'];
+
+const timelineItems = [
+  {
+    label: '화정고등학교',
+    mark: '고',
+    x: 34,
+    y: 88,
+    width: 120,
+    color: '#67d4e8',
+  },
+  {
+    label: '홍익대학교',
+    mark: '대',
+    x: 180,
+    y: 72,
+    width: 254,
+    color: '#34b989',
+  },
+  {
+    label: '군 복무',
+    mark: '군',
+    x: 338,
+    y: 56,
+    width: 80,
+    color: '#82c341',
+  },
+  {
+    label: '백엔드 개발',
+    mark: '직',
+    x: 438,
+    y: 40,
+    width: 58,
+    color: '#ff6378',
+  },
+];
+
 export function HomePage() {
   return (
     <PageTransition>
@@ -46,24 +83,74 @@ export function HomePage() {
           </div>
         </div>
 
-        <aside className="rounded-lg border border-ink-200 bg-white p-5 dark:border-ink-800 dark:bg-ink-900">
-          <p className="text-sm font-medium text-ink-500 dark:text-ink-400">핵심 이력</p>
-          <div className="mt-4 grid gap-3">
-            {highlights.map((item) => {
-              const Icon = item.icon;
-              return (
-                <article key={item.label} className="flex items-start gap-3 rounded-md bg-ink-50 p-3 dark:bg-ink-800">
-                  <Icon className="mt-0.5 h-4 w-4 shrink-0 text-mint-600 dark:text-mint-400" />
-                  <div>
-                    <p className="text-xs font-medium text-ink-500 dark:text-ink-400">{item.label}</p>
-                    <p className="mt-1 text-sm font-semibold text-ink-900 dark:text-white">{item.value}</p>
-                  </div>
-                </article>
-              );
-            })}
+        <aside className="grid gap-4">
+          <div className="rounded-lg border border-ink-200 bg-white p-5 dark:border-ink-800 dark:bg-ink-900">
+            <div className="mx-auto h-36 w-36 overflow-hidden rounded-lg bg-ink-100 dark:bg-ink-800">
+              <img className="h-full w-full object-cover" src="/profile.jpg" alt="강은석 프로필 이미지" />
+            </div>
+          </div>
+
+          <div className="rounded-lg border border-ink-200 bg-white p-5 dark:border-ink-800 dark:bg-ink-900">
+            <p className="text-sm font-medium text-ink-500 dark:text-ink-400">핵심 이력</p>
+            <CareerTimeline />
+            <div className="mt-4 grid gap-3">
+              {highlights.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <article key={item.label} className="flex items-start gap-3 rounded-md bg-ink-50 p-3 dark:bg-ink-800">
+                    <Icon className="mt-0.5 h-4 w-4 shrink-0 text-mint-600 dark:text-mint-400" />
+                    <div>
+                      <p className="text-xs font-medium text-ink-500 dark:text-ink-400">{item.label}</p>
+                      <p className="mt-1 text-sm font-semibold text-ink-900 dark:text-white">{item.value}</p>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
           </div>
         </aside>
       </section>
     </PageTransition>
+  );
+}
+
+function CareerTimeline() {
+  return (
+    <div className="mt-4 rounded-md bg-ink-50 p-3 dark:bg-ink-800">
+      <svg
+        className="h-auto w-full text-ink-600 dark:text-ink-300"
+        viewBox="0 0 520 150"
+        role="img"
+        aria-label="2014년부터 현재까지의 학력과 경력 타임라인"
+      >
+        <line x1="24" y1="122" x2="500" y2="122" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1" />
+
+        {timelineTicks.map((year, index) => {
+          const x = 24 + index * 79.33;
+          return (
+            <g key={year}>
+              <line x1={x} y1="119" x2={x} y2="125" stroke="currentColor" strokeOpacity="0.32" />
+              <text x={x} y="141" textAnchor="middle" className="fill-current text-[11px]">
+                '{year}
+              </text>
+            </g>
+          );
+        })}
+
+        {timelineItems.map((item) => (
+          <g key={item.label}>
+            <line x1={item.x} y1={item.y - 30} x2={item.x} y2="122" stroke={item.color} strokeWidth="1.5" />
+            <rect x={item.x} y={item.y} width={item.width} height="14" rx="1.5" fill={item.color} opacity="0.94" />
+            <rect x={item.x - 7} y={item.y - 38} width="18" height="18" rx="2" fill={item.color} />
+            <text x={item.x + 2} y={item.y - 25} textAnchor="middle" fill="white" className="text-[10px] font-semibold">
+              {item.mark}
+            </text>
+            <text x={item.x + 18} y={item.y - 24} className="fill-current text-[12px] font-medium">
+              {item.label}
+            </text>
+          </g>
+        ))}
+      </svg>
+    </div>
   );
 }
