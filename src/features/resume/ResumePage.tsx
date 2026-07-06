@@ -19,7 +19,7 @@ export function ResumePage() {
           <SectionHeader
             eyebrow="Resume"
             title="이력서"
-            description="경력, 학력, 교육, 자격, 수상"
+            description="경력, 학력, 교육, 자격, 수상 이력"
           />
           <ButtonLink
             href={`mailto:${siteConfig.email}`}

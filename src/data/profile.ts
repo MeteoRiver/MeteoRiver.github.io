@@ -27,7 +27,7 @@ import type {
 export const siteConfig = {
   name: '강은석',
   title: 'Back-End Engineer',
-  headline: '강은석입니다.',
+  headline: '백엔드 개발자 강은석입니다.',
   focus: 'Java / Spring Boot / Authentication',
   email: 'dmseordl@naver.com',
   githubUrl: 'https://github.com/MeteoRiver',
