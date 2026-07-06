@@ -46,9 +46,6 @@ export function HomePage() {
     <PageTransition>
       <section className="page-shell grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
         <div>
-          <p className="mb-5 inline-flex rounded-md border border-mint-500/30 bg-mint-500/10 px-3 py-1 text-sm font-medium text-mint-700 dark:text-mint-300">
-            Java - Spring Boot - MSA - DevOps
-          </p>
           <h1 className="max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-ink-950 dark:text-white sm:text-4xl">
             안녕하세요.
             <span className="block">{siteConfig.headline}</span>
