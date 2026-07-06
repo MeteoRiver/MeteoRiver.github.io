@@ -53,7 +53,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Backend',
     description:
-      'Spring Boot 기반의 API, 인증/인가, 데이터 모델링과 서비스 로직 구현에 집중해 왔습니다.',
+      '',
     items: [
       { name: 'Java', icon: Code2 },
       { name: 'Spring Boot', icon: Server },
@@ -65,7 +65,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Data & Messaging',
     description:
-      '서비스 성격에 맞게 RDB, 캐시, 문서형 저장소를 나누어 사용하고 정합성을 중요하게 봅니다.',
+      '',
     items: [
       { name: 'MySQL', icon: Database },
       { name: 'Redis', icon: Database },
@@ -78,7 +78,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Cloud & DevOps',
     description:
-      'Docker, Jenkins, 클라우드 환경을 활용해 배포 자동화와 실행 환경 표준화를 경험했습니다.',
+      '',
     items: [
       { name: 'Docker', icon: Container },
       { name: 'Jenkins', icon: Workflow },
@@ -89,7 +89,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Architecture & Security',
     description:
-      'MSA, API Gateway, 서비스 디스커버리, JWT/OAuth2, 암호화 흐름 설계 경험을 쌓고 있습니다.',
+      '',
     items: [
       { name: 'Spring Cloud', icon: Cloud },
       { name: 'Eureka', icon: Network },
