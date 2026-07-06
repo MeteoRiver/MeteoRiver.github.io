@@ -189,8 +189,8 @@ export const projects: Project[] = [
     period: '2025.08 - 2025.10',
   },
   {
-    id: 'mbiz-refactor',
-    title: 'M-biz 사내 문서 관리 프로그램',
+    id: 'docs-refactor',
+    title: '사내 문서 관리 프로그램',
     summary:
       '업무, 거래명세서, 입금계산서, 세금 흐름을 상태 기반 프로세스로 정리한 시스템 리팩토링입니다.',
     description:
