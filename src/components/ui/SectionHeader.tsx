@@ -2,9 +2,10 @@ type SectionHeaderProps = {
   eyebrow?: string;
   title: string;
   description?: string;
+  titleClassName?: string;
 };
 
-export function SectionHeader({ eyebrow, title, description }: SectionHeaderProps) {
+export function SectionHeader({ eyebrow, title, description, titleClassName = 'section-title' }: SectionHeaderProps) {
   return (
     <header>
       {eyebrow ? (
@@ -12,7 +13,7 @@ export function SectionHeader({ eyebrow, title, description }: SectionHeaderProp
           {eyebrow}
         </p>
       ) : null}
-      <h1 className="section-title">{title}</h1>
+      <h1 className={titleClassName}>{title}</h1>
       {description ? <p className="section-lead">{description}</p> : null}
     </header>
   );
