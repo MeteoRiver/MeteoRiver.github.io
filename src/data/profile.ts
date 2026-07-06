@@ -329,7 +329,7 @@ export const resumeSections: ResumeSection[] = [
         title: '뮤토스마트 Backend Developer',
         meta: '2025.07 - Present',
         description:
-          'SEMO 암호화 테스트 서비스, M-biz 리팩토링, PODO 인증/암호화 흐름 설계 등 Java/Spring 기반 백엔드 업무를 수행하고 있습니다.',
+          '인증/암호화 흐름 설계 및 구현, Java/Spring 기반 백엔드 업무를 설계 및 수행하고 있습니다.',
       },
     ],
   },

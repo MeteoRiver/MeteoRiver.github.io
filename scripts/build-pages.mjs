@@ -11,12 +11,14 @@ const assetsPath = join(root, 'assets');
 const node = process.execPath;
 const tscPath = join(root, 'node_modules', 'typescript', 'bin', 'tsc');
 const vitePath = join(root, 'node_modules', 'vite', 'bin', 'vite.js');
+const updateBlogPostsPath = join(root, 'scripts', 'update-blog-posts.mjs');
 
 if (existsSync(indexPath)) {
   copyFileSync(indexPath, backupIndexPath);
 }
 
 try {
+  execFileSync(node, [updateBlogPostsPath], { stdio: 'inherit' });
   copyFileSync(sourceIndexPath, indexPath);
   execFileSync(node, [tscPath, '-b'], { stdio: 'inherit' });
   execFileSync(node, [vitePath, 'build', '--configLoader', 'runner'], { stdio: 'inherit' });
@@ -28,7 +30,7 @@ try {
   cpSync(join(distPath, 'index.html'), indexPath);
   cpSync(join(distPath, 'assets'), assetsPath, { recursive: true });
 
-  for (const file of ['404.html', 'favicon.svg', 'meteor.png', 'robots.txt', 'site.webmanifest', 'sitemap.xml']) {
+  for (const file of ['404.html', 'blog-posts.json', 'favicon.svg', 'meteor.png', 'robots.txt', 'site.webmanifest', 'sitemap.xml']) {
     const source = join(distPath, file);
     if (existsSync(source)) {
       cpSync(source, join(root, file));
