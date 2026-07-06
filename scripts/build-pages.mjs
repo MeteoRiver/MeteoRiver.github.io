@@ -28,7 +28,7 @@ try {
   cpSync(join(distPath, 'index.html'), indexPath);
   cpSync(join(distPath, 'assets'), assetsPath, { recursive: true });
 
-  for (const file of ['404.html', 'favicon.svg', 'robots.txt', 'site.webmanifest', 'sitemap.xml']) {
+  for (const file of ['404.html', 'favicon.svg', 'meteor.png', 'robots.txt', 'site.webmanifest', 'sitemap.xml']) {
     const source = join(distPath, file);
     if (existsSync(source)) {
       cpSync(source, join(root, file));

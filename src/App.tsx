@@ -3,7 +3,6 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AppLayout } from './components/layout/AppLayout';
 import { AboutPage } from './features/about/AboutPage';
 import { BlogPage } from './features/blog/BlogPage';
-import { ContactPage } from './features/contact/ContactPage';
 import { HomePage } from './features/home/HomePage';
 import { ProjectDetailPage } from './features/projects/ProjectDetailPage';
 import { ProjectsPage } from './features/projects/ProjectsPage';
@@ -24,7 +23,6 @@ export function App() {
           <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/resume" element={<ResumePage />} />
-          <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AnimatePresence>

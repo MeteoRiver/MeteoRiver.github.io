@@ -25,13 +25,14 @@ export function ButtonLink({
   icon,
 }: ButtonLinkProps) {
   const className = `focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 text-sm font-medium transition ${variants[variant]}`;
+  const isMailLink = href.startsWith('mailto:');
 
-  if (external) {
+  if (external || isMailLink) {
     return (
-      <a className={className} href={href} target="_blank" rel="noreferrer">
+      <a className={className} href={href} target={isMailLink ? undefined : '_blank'} rel={isMailLink ? undefined : 'noreferrer'}>
         {icon}
         {children}
-        <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+        {external ? <ArrowUpRight className="h-4 w-4" aria-hidden="true" /> : null}
       </a>
     );
   }

@@ -13,15 +13,21 @@ import {
   Network,
   Server,
   ShieldCheck,
-  TerminalSquare,
   Workflow,
 } from 'lucide-react';
-import type { BlogPost, NavItem, Project, ResumeSection, SkillGroup, SocialLink } from '../types/site';
+import type {
+  BlogPost,
+  NavItem,
+  Project,
+  ResumeSection,
+  SkillGroup,
+  SocialLink,
+} from '../types/site';
 
 export const siteConfig = {
   name: '강은석',
   title: 'Back-End Engineer',
-  headline: '소통과 책임을 바탕으로 성장하는 Java/Spring 백엔드 개발자입니다.',
+  headline: 'Java/Spring 백엔드 개발자 강은석입니다.',
   focus: 'Java / Spring Boot / MSA / DevOps',
   email: 'dmseordl@naver.com',
   githubUrl: 'https://github.com/MeteoRiver',
@@ -35,7 +41,6 @@ export const navItems: NavItem[] = [
   { label: 'Projects', href: '/projects' },
   { label: 'Blog', href: '/blog' },
   { label: 'Resume', href: '/resume' },
-  { label: 'Contact', href: '/contact' },
 ];
 
 export const socialLinks: SocialLink[] = [
@@ -47,48 +52,51 @@ export const socialLinks: SocialLink[] = [
 export const skillGroups: SkillGroup[] = [
   {
     title: 'Backend',
-    description: 'Spring Boot 기반의 API, 인증/인가, 데이터 모델링과 서비스 로직 구현에 집중해 왔습니다.',
+    description:
+      'Spring Boot 기반의 API, 인증/인가, 데이터 모델링과 서비스 로직 구현에 집중해 왔습니다.',
     items: [
       { name: 'Java', icon: Code2 },
       { name: 'Spring Boot', icon: Server },
       { name: 'Spring MVC', icon: Braces },
       { name: 'Spring Security', icon: ShieldCheck },
       { name: 'Spring Data JPA', icon: Database },
-      { name: 'QueryDSL', icon: TerminalSquare },
     ],
   },
   {
     title: 'Data & Messaging',
-    description: '서비스 성격에 맞게 RDB, 캐시, 문서형 저장소를 나누어 사용하고 정합성을 중요하게 봅니다.',
+    description:
+      '서비스 성격에 맞게 RDB, 캐시, 문서형 저장소를 나누어 사용하고 정합성을 중요하게 봅니다.',
     items: [
       { name: 'MySQL', icon: Database },
       { name: 'Redis', icon: Database },
       { name: 'MongoDB', icon: Database },
+      { name: 'PostgreSQL', icon: Database },
+      { name: 'MariaDB', icon: Database },
       { name: 'Flyway', icon: Workflow },
     ],
   },
   {
     title: 'Cloud & DevOps',
-    description: 'Docker, Jenkins, 클라우드 환경을 활용해 배포 자동화와 실행 환경 표준화를 경험했습니다.',
+    description:
+      'Docker, Jenkins, 클라우드 환경을 활용해 배포 자동화와 실행 환경 표준화를 경험했습니다.',
     items: [
       { name: 'Docker', icon: Container },
       { name: 'Jenkins', icon: Workflow },
       { name: 'Nginx', icon: Network },
       { name: 'Naver Cloud', icon: Cloud },
-      { name: 'Kubernetes', icon: Cloud },
-      { name: 'GitHub Actions', icon: Github },
     ],
   },
   {
     title: 'Architecture & Security',
-    description: 'MSA, API Gateway, 서비스 디스커버리, JWT/OAuth2, 암호화 흐름 설계 경험을 쌓고 있습니다.',
+    description:
+      'MSA, API Gateway, 서비스 디스커버리, JWT/OAuth2, 암호화 흐름 설계 경험을 쌓고 있습니다.',
     items: [
       { name: 'Spring Cloud', icon: Cloud },
       { name: 'Eureka', icon: Network },
       { name: 'WebFlux', icon: Workflow },
       { name: 'JWT', icon: KeyRound },
       { name: 'OAuth2', icon: ShieldCheck },
-      { name: 'ECDSA/RSA', icon: KeyRound },
+      { name: 'Cryptography Basics', icon: KeyRound },
     ],
   },
 ];
@@ -97,17 +105,32 @@ export const projects: Project[] = [
   {
     id: 'paranmanzang',
     title: 'Paranmanzang',
-    summary: '독서 소모임을 위한 공간 대여, 결제, 채팅 서비스를 MSA와 비동기 구조로 구현한 프로젝트입니다.',
+    summary:
+      '독서 소모임을 위한 공간 대여, 결제, 채팅 서비스를 MSA와 비동기 구조로 구현한 프로젝트입니다.',
     description:
       '사용자와 판매자가 공간을 등록하고 예약/결제할 수 있으며, 소모임원 간 채팅까지 지원하는 독서 소모임 공간 대여 서비스입니다. Spring Cloud 기반 MSA 구조와 Docker/Jenkins 배포 파이프라인을 경험했습니다.',
     problem:
       '공간 대여 서비스는 사용자, 판매자, 결제, 채팅 등 도메인이 분리되어 있고 인증과 데이터 저장소 요구가 달라 단일 구조로 관리하기 어려웠습니다.',
     solution:
       'Config Server, Eureka, Gateway를 중심으로 서비스를 분리하고, JWT/OAuth2 인증, MySQL/MongoDB/Redis 저장소, WebFlux 기반 비동기 흐름을 적용했습니다. Jenkins와 Docker Hub를 연동해 자동 빌드/배포를 구성했습니다.',
-    architecture: ['Spring Cloud MSA', 'Eureka Service Discovery', 'Gateway API Routing', 'Docker/Jenkins CI/CD'],
+    architecture: [
+      'Spring Cloud MSA',
+      'Eureka Service Discovery',
+      'Gateway API Routing',
+      'Docker/Jenkins CI/CD',
+    ],
     retrospective:
       'MSA는 기술 선택보다 서비스 경계와 운영 흐름을 이해하는 일이 더 중요하다는 점을 배웠습니다. 배포 자동화와 인증 흐름을 직접 다루며 백엔드 운영 관점의 감각을 넓혔습니다.',
-    techStack: ['Java', 'Spring Boot', 'Spring Cloud', 'JPA', 'MongoDB', 'Redis', 'Docker', 'Jenkins'],
+    techStack: [
+      'Java',
+      'Spring Boot',
+      'Spring Cloud',
+      'JPA',
+      'MongoDB',
+      'Redis',
+      'Docker',
+      'Jenkins',
+    ],
     githubUrl: 'https://github.com/MeteoRiver/paran_msa',
     status: 'Completed',
   },
@@ -121,24 +144,44 @@ export const projects: Project[] = [
       '숙박 서비스는 예약 데이터, 사용자 인증, 외부 지도 API, 결제 흐름이 함께 얽혀 있어 안정적인 계층 분리와 인증 처리가 필요했습니다.',
     solution:
       'Spring MVC 구조로 API를 설계하고, Spring Security와 JWT/OAuth2로 인증/인가를 구현했습니다. 지도 API와 주소 검색을 연동해 호텔 위치 정보를 사용자 흐름에 연결했습니다.',
-    architecture: ['Spring Boot Monolith', 'Spring Security Auth', 'MySQL/Redis Data Layer', 'React Client'],
+    architecture: [
+      'Spring Boot Monolith',
+      'Spring Security Auth',
+      'MySQL/Redis Data Layer',
+      'React Client',
+    ],
     retrospective:
       '짧은 기간의 프로젝트였지만 인증 흐름과 외부 API 연동, 예약 도메인의 상태 관리를 실제 서비스 형태로 연결해보는 경험을 했습니다.',
-    techStack: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'OAuth2', 'MySQL', 'Redis', 'Docker'],
+    techStack: [
+      'Java',
+      'Spring Boot',
+      'Spring Security',
+      'JWT',
+      'OAuth2',
+      'MySQL',
+      'Redis',
+      'Docker',
+    ],
     githubUrl: 'https://github.com/MeteoRiver/LodgingCommander',
     status: 'Completed',
   },
   {
     id: 'semo-crypto',
     title: 'SEMO Crypto Test Service',
-    summary: '업무 프로젝트에서 키 발급, 인코딩, 암호 알고리즘 검증을 다루는 암호화 테스트 서비스입니다.',
+    summary:
+      '업무 프로젝트에서 키 발급, 인코딩, 암호 알고리즘 검증을 다루는 암호화 테스트 서비스입니다.',
     description:
       'Hash, ECC, RSA 기능을 계층형 구조로 모듈화하고 BouncyCastle 기반 Crypto Provider를 추상화해 알고리즘 확장 가능성을 고려한 서비스입니다.',
     problem:
       '암호 알고리즘 검증은 잘못된 곡선 입력, 인코딩 오류, 키 포맷 차이 등 예외 케이스가 많아 일관된 구조와 검증 흐름이 필요했습니다.',
     solution:
       'Controller, Service, Crypto Layer로 책임을 나누고 ECC 공개키 압축/비압축 포맷, ECDSA 전자서명 검증, RSA-OAEP 암복호화, 처리 시간 측정 기능을 구현했습니다.',
-    architecture: ['Controller Layer', 'Service Layer', 'Crypto Provider Abstraction', 'Common Exception Handling'],
+    architecture: [
+      'Controller Layer',
+      'Service Layer',
+      'Crypto Provider Abstraction',
+      'Common Exception Handling',
+    ],
     retrospective:
       '보안 도메인은 구현 자체보다 명확한 입력 검증, 실패 처리, 알고리즘 교체가 가능한 구조가 중요하다는 점을 체감했습니다.',
     techStack: ['Java', 'Spring Boot', 'BouncyCastle', 'ECDSA', 'RSA-OAEP', 'REST API'],
@@ -148,14 +191,20 @@ export const projects: Project[] = [
   {
     id: 'mbiz-refactor',
     title: 'M-biz Refactoring',
-    summary: '업무, 거래명세서, 입금계산서, 세금 흐름을 상태 기반 프로세스로 정리한 시스템 리팩토링입니다.',
+    summary:
+      '업무, 거래명세서, 입금계산서, 세금 흐름을 상태 기반 프로세스로 정리한 시스템 리팩토링입니다.',
     description:
       '분산된 업무 흐름을 거래명세서 중심 상태 기반 프로세스로 통합하고, 댓글/파일 첨부/메일 알림/통계/권한 구조를 개선했습니다.',
     problem:
       '업무 단위가 분산되어 데이터 관계가 복잡하고, 권한 단계와 삭제 정책이 명시적이지 않아 유지보수와 이력 추적이 어려웠습니다.',
     solution:
       '도메인 구조와 연관관계를 재설계하고 명시적 권한 컬럼, Soft Delete, Flyway 마이그레이션, RestAssured 통합 테스트를 도입했습니다. 파일 업로드 제한과 상대 경로 보존 문제를 운영 환경 기준으로 개선했습니다.',
-    architecture: ['Domain Refactoring', 'State Based Process', 'Flyway Migration', 'RestAssured Integration Test'],
+    architecture: [
+      'Domain Refactoring',
+      'State Based Process',
+      'Flyway Migration',
+      'RestAssured Integration Test',
+    ],
     retrospective:
       '기존 기능을 유지하면서 구조를 바꾸는 일은 새 기능 개발보다 더 많은 맥락 이해가 필요했습니다. 데이터 정합성과 운영 이슈를 함께 보는 관점을 배웠습니다.',
     techStack: ['Java', 'Spring Boot', 'JPA', 'Docker', 'Flyway', 'RestAssured'],
@@ -238,13 +287,14 @@ export const resumeSections: ResumeSection[] = [
     items: [
       {
         title: '홍익대학교 세종캠퍼스 소프트웨어융합학과',
-        meta: '2018.03 - 2024.08 | GPA 3.83 / 4.5',
-        description: 'Java, 데이터베이스, 웹 개발, IoT 종합설계 프로젝트를 중심으로 소프트웨어 개발 기초를 쌓았습니다.',
+        meta: '2018.03 - 2024.08 | GPA 3.83 / 4.5 ',
+        description:
+          'Java, 데이터베이스, 웹 개발, IoT 종합설계 프로젝트를 중심으로 소프트웨어 개발 기초를 쌓았습니다.',
       },
       {
         title: '화정고등학교',
         meta: '2017.02 졸업',
-        description: '문제를 꾸준히 파고드는 학습 태도와 협업의 기본기를 다졌습니다.',
+        description: '',
       },
     ],
   },
@@ -267,9 +317,15 @@ export const resumeSections: ResumeSection[] = [
         description: 'KDATA 데이터자격검정 SQLD 자격을 취득했습니다.',
       },
       {
+        title: '리눅스 마스터 2급',
+        meta: '2026.01',
+        description: '한국정보통신진흥협회 리눅스 마스터 2급 자격을 취득했습니다.',
+      },
+      {
         title: '소프트웨어융합학과 학술제 최우수상',
         meta: '2021.11',
-        description: '홍익대학교 소프트웨어융합학과 학술제에서 종합설계 프로젝트로 최우수상을 수상했습니다.',
+        description:
+          '홍익대학교 소프트웨어융합학과 학술제에서 종합설계 프로젝트로 최우수상을 수상했습니다.',
       },
     ],
   },

@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, FileText, Github } from 'lucide-react';
+import { ArrowRight, BookOpen, FileText, Github, Mail } from 'lucide-react';
 import { ButtonLink } from '../../components/ui/ButtonLink';
 import { PageTransition } from '../../components/ui/PageTransition';
 import { Tag } from '../../components/ui/Tag';
@@ -36,6 +36,9 @@ export function HomePage() {
             </ButtonLink>
             <ButtonLink href="/resume" icon={<FileText className="h-4 w-4" />}>
               웹 이력서
+            </ButtonLink>
+            <ButtonLink href={`mailto:${siteConfig.email}`} icon={<Mail className="h-4 w-4" />}>
+              {siteConfig.email}
             </ButtonLink>
             <ButtonLink href={siteConfig.githubUrl} external icon={<Github className="h-4 w-4" />}>
               GitHub

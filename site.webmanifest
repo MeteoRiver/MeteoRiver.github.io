@@ -3,9 +3,9 @@
   "short_name": "MeteoRiver",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "64x64",
-      "type": "image/svg+xml"
+      "src": "/meteor.png",
+      "sizes": "any",
+      "type": "image/png"
     }
   ],
   "theme_color": "#f8fafc",
