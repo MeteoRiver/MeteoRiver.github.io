@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81a6709b-b2b9-44e8-be12-62ff2dd51990" name="Changes" comment="feat: 내 정보 추가">
+    <list default="true" id="81a6709b-b2b9-44e8-be12-62ff2dd51990" name="Changes" comment="refactor: contact 페이지 삭제 및 아이콘 변경">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-D3LMnw-O.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-DZi4DGXv.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-DtHjBzQ9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-DyF_utme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/index-ydOgZ6QT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/index-BrkH8RTk.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/BlogPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/BlogPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/home/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/projects/ProjectDetailPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/projects/ProjectDetailPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/projects/ProjectsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/projects/ProjectsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/skills/SkillsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/skills/SkillsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/site.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,25 +34,31 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dmseo/Desktop/utc/MeteoRiver.github.io",
+    "last_opened_file_path": "C:/Users/eunseok/IdeaProjects/MeteoRiver.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\dmseo\\Desktop\\utc\\MeteoRiver.github.io\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Users\\eunseok\\IdeaProjects\\MeteoRiver.github.io\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
@@ -64,6 +71,8 @@
       <option name="presentableId" value="Default" />
       <updated>1783252710398</updated>
       <workItem from="1783252717556" duration="2647000" />
+      <workItem from="1783298649261" duration="681000" />
+      <workItem from="1783302858561" duration="1957000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 홈페이지 셋팅">
       <option name="closed" value="true" />
@@ -89,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783260635154</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactor: contact 페이지 삭제 및 아이콘 변경">
+      <option name="closed" value="true" />
+      <created>1783299483466</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783299483466</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +117,10 @@
     <MESSAGE value="feat: 불필요 파일 제거" />
     <MESSAGE value="feat: 내 정보 입력" />
     <MESSAGE value="feat: 내 정보 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 내 정보 추가" />
+    <MESSAGE value="refactor: contact 페이지 삭제 및 아이콘 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: contact 페이지 삭제 및 아이콘 변경" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>

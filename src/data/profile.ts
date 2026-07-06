@@ -104,7 +104,7 @@ export const skillGroups: SkillGroup[] = [
 export const projects: Project[] = [
   {
     id: 'paranmanzang',
-    title: 'Paranmanzang',
+    title: '독서 소모임 공간 관리 시스템',
     summary:
       '독서 소모임을 위한 공간 대여, 결제, 채팅 서비스를 MSA와 비동기 구조로 구현한 프로젝트입니다.',
     description:
@@ -132,11 +132,11 @@ export const projects: Project[] = [
       'Jenkins',
     ],
     githubUrl: 'https://github.com/MeteoRiver/paran_msa',
-    status: 'Completed',
+    period: '2024.08 - 2024.11',
   },
   {
     id: 'lodging-commander',
-    title: 'LodgingCommander',
+    title: '호텔 예약 프로그램',
     summary: '호텔 숙박 예약과 결제를 제공하는 Spring Boot 기반 숙박 서비스입니다.',
     description:
       '호텔 등록, 예약, 결제, 지도 주소 검색을 포함한 숙박 서비스입니다. Spring Security, JWT, OAuth2 인증과 MySQL/Redis 기반 데이터 처리를 담당했습니다.',
@@ -163,11 +163,11 @@ export const projects: Project[] = [
       'Docker',
     ],
     githubUrl: 'https://github.com/MeteoRiver/LodgingCommander',
-    status: 'Completed',
+    period: '2024.06 - 2024.08',
   },
   {
     id: 'semo-crypto',
-    title: 'SEMO Crypto Test Service',
+    title: '암호화 테스트 서비스',
     summary:
       '업무 프로젝트에서 키 발급, 인코딩, 암호 알고리즘 검증을 다루는 암호화 테스트 서비스입니다.',
     description:
@@ -186,11 +186,11 @@ export const projects: Project[] = [
       '보안 도메인은 구현 자체보다 명확한 입력 검증, 실패 처리, 알고리즘 교체가 가능한 구조가 중요하다는 점을 체감했습니다.',
     techStack: ['Java', 'Spring Boot', 'BouncyCastle', 'ECDSA', 'RSA-OAEP', 'REST API'],
     githubUrl: siteConfig.githubUrl,
-    status: 'In Progress',
+    period: '2025.08 - 2025.10',
   },
   {
     id: 'mbiz-refactor',
-    title: 'M-biz Refactoring',
+    title: 'M-biz 사내 문서 관리 프로그램',
     summary:
       '업무, 거래명세서, 입금계산서, 세금 흐름을 상태 기반 프로세스로 정리한 시스템 리팩토링입니다.',
     description:
@@ -209,7 +209,74 @@ export const projects: Project[] = [
       '기존 기능을 유지하면서 구조를 바꾸는 일은 새 기능 개발보다 더 많은 맥락 이해가 필요했습니다. 데이터 정합성과 운영 이슈를 함께 보는 관점을 배웠습니다.',
     techStack: ['Java', 'Spring Boot', 'JPA', 'Docker', 'Flyway', 'RestAssured'],
     githubUrl: siteConfig.githubUrl,
-    status: 'In Progress',
+    period: '2025.10 - 2026.01',
+  },
+  {
+    id: 'passwordless-auth-platform',
+    title: 'Passwordless Authentication Platform',
+    summary:
+      '모바일 앱, 인증 서버, 서비스 제공자 서버, SDK를 연동해 QR/Push 기반 비밀번호 없는 인증 흐름을 구현한 내부 프로젝트입니다.',
+    description:
+      '서비스 서버가 인증 로직을 직접 구현하지 않아도 되도록 인증 서버, 서비스 제공자 서버, 모바일 인증 앱, SDK의 역할을 분리한 인증 플랫폼입니다. QR 인증과 Push 인증 흐름을 중심으로 요청 검증, 암복호화, 사용자 인증 단계를 설계했습니다.',
+    problem:
+      '서비스마다 인증 로직을 직접 구현하면 사용자 식별 정보와 인증 요청이 여러 서버를 오가며 보안 경계가 흐려질 수 있었습니다. 인증 책임을 분리하면서도 서버 간 요청을 신뢰할 수 있는 구조가 필요했습니다.',
+    solution:
+      '인증 서버와 서비스 제공자 서버 사이에 SDK 기반 연동 구조를 두고, QR/Push 인증 요청 흐름을 구현했습니다. 요청에는 Nonce, Timestamp, 서명 검증을 적용하고 주요 payload는 JWE 기반으로 보호했습니다. 모바일 앱에서는 Keystore와 생체/PIN 인증을 활용해 사용자 인증 단계를 분리했습니다.',
+    architecture: [
+      'Auth Server',
+      'Service Provider Server',
+      'Client SDK',
+      'Mobile Authentication App',
+    ],
+    retrospective:
+      '인증 기능은 단순 로그인 구현보다 서버 간 신뢰 경계, 요청 무결성, 키 관리, 사용자 경험이 함께 맞물리는 문제라는 점을 배웠습니다. 암호화 알고리즘 자체보다 안전한 흐름과 실패 처리 설계가 더 중요하다는 관점을 얻었습니다.',
+    techStack: [
+      'Java',
+      'Spring Boot',
+      'PostgreSQL',
+      'Flyway',
+      'Caffeine Cache',
+      'Firebase FCM',
+      'React',
+      'Android',
+      'SDK',
+      'JWE',
+    ],
+    period: '2026.02.19 - 2026.03.27',
+  },
+  {
+    id: 'race-timing-management-system',
+    title: 'Race Timing Management System',
+    summary:
+      'RFID 리더기에서 수집되는 경기 기록 데이터를 기반으로 대회 운영, 참가자 관리, 결과 집계, 통계 기능을 제공하는 내부 시스템입니다.',
+    description:
+      '대회, 종목, 참가자, 타이밍 포인트, 스플릿, 리더기 설정, 결과 데이터를 하나의 운영 흐름으로 다루는 기록 관리 시스템입니다. 현장 운영자가 사용하는 워크벤치와 참가자 기록 조회 흐름을 함께 고려해 API와 관리 화면을 구성했습니다.',
+    problem:
+      '대회 운영에서는 참가자 정보, RFID 리더기 설정, 구간 기록, 순위, 통계가 강하게 연결됩니다. 리더기에서 들어오는 원천 데이터를 안정적으로 저장하고, 운영자가 조회/수정/추출할 수 있는 관리 기능과 결과 제공 구조가 필요했습니다.',
+    solution:
+      '대회, 종목, 그룹, 참가자, 리더기, 타이밍 포인트, 스플릿을 도메인 단위로 나누고 Spring Boot 기반 API를 구성했습니다. RFID raw data를 결과 데이터로 가공하고, 리더보드/구간별 통계/성별 분석/결과 다운로드 기능을 제공했습니다. 논리삭제 정책, 권한별 개인정보 조회 제한, 이메일 인증, JWT 인증, Flyway 마이그레이션도 함께 정리했습니다.',
+    architecture: [
+      'Event Management API',
+      'RFID Data Ingestion',
+      'Result Aggregation',
+      'Statistics Dashboard',
+    ],
+    retrospective:
+      '운영 시스템은 기능 수보다 데이터 정합성과 예외 흐름이 더 중요했습니다. 현장 데이터가 늦게 들어오거나 누락될 수 있다는 전제를 두고 결과 수정, 감사 로그, 권한 제어를 함께 설계하는 경험을 했습니다.',
+    techStack: [
+      'Java 21',
+      'Spring Boot',
+      'Spring Security',
+      'JPA',
+      'MariaDB',
+      'Flyway',
+      'JWT',
+      'React',
+      'TypeScript',
+      'React Query',
+      'ECharts',
+    ],
+    period: '2026.04 - 진행중',
   },
   {
     id: 'iot-smart-system',
@@ -226,9 +293,9 @@ export const projects: Project[] = [
       '소프트웨어가 실제 장치 동작으로 이어지는 경험을 통해 입력, 처리, 출력 흐름을 끝까지 검증하는 습관을 익혔습니다.',
     techStack: ['Java', 'Android Studio', 'Firebase', 'Arduino', 'C++', 'OpenCV'],
     githubUrl: siteConfig.githubUrl,
-    status: 'Completed',
+    period: '2021.02 - 2021.08',
   },
-];
+].sort((a, b) => b.period.localeCompare(a.period));
 
 export const fallbackBlogPosts: BlogPost[] = [
   {

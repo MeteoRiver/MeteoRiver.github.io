@@ -15,8 +15,8 @@ export function BlogPage() {
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeader
             eyebrow="Blog"
-            title="학습과 프로젝트 기록은 Archiventum 블로그에 남기고 있습니다."
-            description="Spring, DevOps, 프로젝트 회고처럼 백엔드 개발자로 성장하며 정리한 글을 연결합니다."
+            title="블로그"
+            description="운영하고 있는 블로그 입니다."
           />
           <ButtonLink href={siteConfig.blogUrl} external icon={<BookOpen className="h-4 w-4" />}>
             전체 글 보기

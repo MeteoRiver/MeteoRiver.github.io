@@ -35,7 +35,7 @@ export function ProjectDetailPage() {
         <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_320px]">
           <article>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-mint-600 dark:text-mint-400">
-              {project.status}
+              {project.period}
             </p>
             <h1 className="text-3xl font-semibold tracking-normal text-ink-950 dark:text-white sm:text-4xl">
               {project.title}
@@ -67,9 +67,11 @@ export function ProjectDetailPage() {
               ))}
             </div>
             <div className="mt-6 grid gap-2">
-              <ButtonLink href={project.githubUrl} external icon={<Github className="h-4 w-4" />}>
-                GitHub
-              </ButtonLink>
+              {project.githubUrl ? (
+                <ButtonLink href={project.githubUrl} external icon={<Github className="h-4 w-4" />}>
+                  GitHub
+                </ButtonLink>
+              ) : null}
               {project.demoUrl ? (
                 <ButtonLink href={project.demoUrl} external icon={<ExternalLink className="h-4 w-4" />}>
                   Demo

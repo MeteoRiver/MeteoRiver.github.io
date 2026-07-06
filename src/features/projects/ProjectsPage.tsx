@@ -11,8 +11,8 @@ export function ProjectsPage() {
       <section className="page-shell">
         <SectionHeader
           eyebrow="Projects"
-          title="결과보다 어떤 문제를 어떻게 풀었는지 보여주는 공간입니다."
-          description="포트폴리오 프로젝트, 업무 프로젝트, 학부 프로젝트를 백엔드 개발 관점에서 정리했습니다."
+          title="프로젝트"
+          description="학부, 사이드 프로젝트, 업무 프로젝트"
         />
 
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -24,7 +24,7 @@ export function ProjectsPage() {
               <div className="flex items-start justify-between gap-3">
                 <h2 className="text-lg font-semibold text-ink-950 dark:text-white">{project.title}</h2>
                 <span className="rounded-md bg-ink-100 px-2 py-1 text-xs font-medium text-ink-600 dark:bg-ink-800 dark:text-ink-300">
-                  {project.status}
+                  {project.period}
                 </span>
               </div>
               <p className="mt-3 flex-1 text-sm leading-6 text-ink-600 dark:text-ink-300">{project.summary}</p>
@@ -37,9 +37,11 @@ export function ProjectsPage() {
                 <ButtonLink href={`/projects/${project.id}`} variant="primary">
                   자세히 보기
                 </ButtonLink>
-                <ButtonLink href={project.githubUrl} external icon={<Github className="h-4 w-4" />}>
-                  GitHub
-                </ButtonLink>
+                {project.githubUrl ? (
+                  <ButtonLink href={project.githubUrl} external icon={<Github className="h-4 w-4" />}>
+                    GitHub
+                  </ButtonLink>
+                ) : null}
                 {project.demoUrl ? (
                   <ButtonLink href={project.demoUrl} external icon={<ExternalLink className="h-4 w-4" />}>
                     Demo

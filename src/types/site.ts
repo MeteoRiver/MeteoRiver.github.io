@@ -32,9 +32,9 @@ export type Project = {
   architecture: string[];
   retrospective: string;
   techStack: string[];
-  githubUrl: string;
+  githubUrl?: string;
   demoUrl?: string;
-  status: 'Planning' | 'In Progress' | 'Completed';
+  period: string;
 };
 
 export type BlogPost = {

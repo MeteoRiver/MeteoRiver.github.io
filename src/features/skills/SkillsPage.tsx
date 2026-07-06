@@ -8,8 +8,8 @@ export function SkillsPage() {
       <section className="page-shell">
         <SectionHeader
           eyebrow="Skills"
-          title="Spring 백엔드 구현부터 배포 자동화와 보안 흐름까지 연결해 경험했습니다."
-          description="이력서와 포트폴리오에 기반해 실제 프로젝트에서 사용한 기술을 중심으로 정리했습니다."
+          title="기술 스택"
+          description="이력서와 포트폴리오에 기반해 실제 프로젝트에서 사용한 기술 스택"
         />
 
         <div className="mt-10 grid gap-5 md:grid-cols-2">

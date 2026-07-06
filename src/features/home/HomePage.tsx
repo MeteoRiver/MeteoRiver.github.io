@@ -120,7 +120,7 @@ export function HomePage() {
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-lg font-semibold text-ink-950 dark:text-white">{project.title}</h3>
                   <span className="rounded-md bg-mint-500/10 px-2 py-1 text-xs font-medium text-mint-700 dark:text-mint-300">
-                    {project.status}
+                    {project.period}
                   </span>
                 </div>
                 <p className="mt-3 text-sm leading-6 text-ink-600 dark:text-ink-300">{project.summary}</p>
