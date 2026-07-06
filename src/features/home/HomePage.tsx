@@ -19,8 +19,7 @@ export function HomePage() {
             <span className="block">{siteConfig.headline}</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-ink-600 dark:text-ink-300">
-            공간 대여 MSA, 숙박 예약 서비스, 암호화 테스트 서비스, 업무 시스템 리팩토링을 경험했습니다. 문제를 끝까지 추적하고 팀과
-            소통하며 안정적인 백엔드를 만드는 데 집중합니다.
+            Java/Spring Boot 백엔드 개발자입니다. 프로젝트를 설계하고 진행하며 문제를 끝까지 추적하고 팀과 소통하며 안정적인 백엔드를 만드는 데 집중합니다.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {siteConfig.focus.split(' / ').map((item) => (

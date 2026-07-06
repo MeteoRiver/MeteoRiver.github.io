@@ -4,7 +4,6 @@ import { PageTransition } from '../../components/ui/PageTransition';
 import { SectionHeader } from '../../components/ui/SectionHeader';
 import { Tag } from '../../components/ui/Tag';
 import {
-  projects,
   resumeSections,
   siteConfig,
   skillGroups,
@@ -20,7 +19,7 @@ export function ResumePage() {
           <SectionHeader
             eyebrow="Resume"
             title="이력서"
-            description="경력, 학력, 교육, 자격, 수상, 프로젝트 경험"
+            description="경력, 학력, 교육, 자격, 수상"
           />
           <ButtonLink
             href={`mailto:${siteConfig.email}`}
@@ -57,20 +56,6 @@ export function ResumePage() {
                 </div>
               </section>
             ))}
-
-            <section className="rounded-lg border border-ink-200 bg-white p-6 dark:border-ink-800 dark:bg-ink-900">
-              <h2 className="text-lg font-semibold text-ink-950 dark:text-white">프로젝트 경험</h2>
-              <div className="mt-5 grid gap-4">
-                {projects.map((project) => (
-                  <article key={project.id}>
-                    <h3 className="font-semibold text-ink-900 dark:text-white">{project.title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-ink-600 dark:text-ink-300">
-                      {project.summary}
-                    </p>
-                  </article>
-                ))}
-              </div>
-            </section>
           </div>
 
           <aside className="h-fit rounded-lg border border-ink-200 bg-white p-6 dark:border-ink-800 dark:bg-ink-900">
