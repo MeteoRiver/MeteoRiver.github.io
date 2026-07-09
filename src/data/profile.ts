@@ -139,13 +139,13 @@ export const projects: Project[] = [
     title: '호텔 예약 프로그램',
     summary: '호텔 숙박 예약과 결제를 제공하는 Spring Boot 기반 숙박 서비스입니다.',
     description:
-      '호텔 등록, 예약, 결제, 지도 주소 검색을 포함한 숙박 서비스입니다. Spring Security, JWT, OAuth2 인증과 MySQL/Redis 기반 데이터 처리를 담당했습니다.',
+      '호텔 등록, 예약, 결제, 지도 주소 검색을 포함한 숙박 서비스입니다. Spring Security, OAuth2 인증과 MySQL/Redis 기반 데이터 처리를 담당했습니다.',
     problem:
       '숙박 서비스는 예약 데이터, 사용자 인증, 외부 지도 API, 결제 흐름이 함께 얽혀 있어 안정적인 계층 분리와 인증 처리가 필요했습니다.',
     solution:
-      'Spring MVC 구조로 API를 설계하고, Spring Security와 JWT/OAuth2로 인증/인가를 구현했습니다. 지도 API와 주소 검색을 연동해 호텔 위치 정보를 사용자 흐름에 연결했습니다.',
+      'Spring MVC 구조로 API를 설계하고, Spring Security와 OAuth2로 인증/인가를 구현했습니다. 지도 API와 주소 검색을 연동해 호텔 위치 정보를 사용자 흐름에 연결했습니다.',
     architecture: [
-      'Spring Boot Monolith',
+      'Spring Boot',
       'Spring Security Auth',
       'MySQL/Redis Data Layer',
       'React Client',
@@ -156,17 +156,14 @@ export const projects: Project[] = [
       'Java',
       'Spring Boot',
       'Spring Security',
-      'JWT',
       'OAuth2',
       'MySQL',
-      'Redis',
-      'Docker',
     ],
     githubUrl: 'https://github.com/MeteoRiver/LodgingCommander',
     period: '2024.06 - 2024.08',
   },
   {
-    id: 'semo-crypto',
+    id: 'crypto-test',
     title: '암호화 테스트 서비스',
     summary:
       '업무 프로젝트에서 키 발급, 인코딩, 암호 알고리즘 검증을 다루는 암호화 테스트 서비스입니다.',
@@ -189,7 +186,7 @@ export const projects: Project[] = [
     period: '2025.08 - 2025.10',
   },
   {
-    id: 'docs-refactor',
+    id: 'docs',
     title: '사내 문서 관리 프로그램',
     summary:
       '업무, 거래명세서, 입금계산서, 세금 흐름을 상태 기반 프로세스로 정리한 시스템 리팩토링입니다.',
@@ -221,7 +218,7 @@ export const projects: Project[] = [
     problem:
       '서비스마다 인증 로직을 직접 구현하면 사용자 식별 정보와 인증 요청이 여러 서버를 오가며 보안 경계가 흐려질 수 있었습니다. 인증 책임을 분리하면서도 서버 간 요청을 신뢰할 수 있는 구조가 필요했습니다.',
     solution:
-      '인증 서버와 서비스 제공자 서버 사이에 SDK 기반 연동 구조를 두고, QR/Push 인증 요청 흐름을 구현했습니다. 요청에는 Nonce, Timestamp, 서명 검증을 적용하고 주요 payload는 JWE 기반으로 보호했습니다. 모바일 앱에서는 Keystore와 생체/PIN 인증을 활용해 사용자 인증 단계를 분리했습니다.',
+      '인증 서버와 서비스 제공자 서버 사이에 SDK 기반 연동 구조를 두고, QR/Push 인증 요청 흐름을 구현했습니다. 요청에는 Nonce, Timestamp, 서명 검증을 적용하고 E2EE를 구현하기 위해 주요 payload는 JWE 기반으로 보호했습니다. 모바일 앱에서는 Keystore와 생체/PIN 인증을 활용해 사용자 인증 단계를 분리했습니다.',
     architecture: [
       'Auth Server',
       'Service Provider Server',
@@ -296,30 +293,6 @@ export const projects: Project[] = [
     period: '2021.02 - 2021.08',
   },
 ].sort((a, b) => b.period.localeCompare(a.period));
-
-export const fallbackBlogPosts: BlogPost[] = [
-  {
-    title: 'Spring Security와 JWT 인증 흐름 정리',
-    url: siteConfig.blogUrl,
-    publishedAt: 'Latest',
-    tags: ['Spring Security', 'JWT'],
-    summary: '백엔드 인증/인가를 공부하며 토큰 기반 인증 흐름과 보안 고려사항을 정리합니다.',
-  },
-  {
-    title: 'Docker와 Jenkins로 배포 자동화하기',
-    url: siteConfig.blogUrl,
-    publishedAt: 'Archive',
-    tags: ['Docker', 'Jenkins', 'DevOps'],
-    summary: '프로젝트에서 경험한 컨테이너 빌드, 이미지 배포, CI/CD 파이프라인 구성을 기록합니다.',
-  },
-  {
-    title: 'MSA 프로젝트에서 서비스 경계 나누기',
-    url: siteConfig.blogUrl,
-    publishedAt: 'Archive',
-    tags: ['MSA', 'Spring Cloud'],
-    summary: 'Eureka, Gateway, Config Server를 사용하며 배운 서비스 분리와 운영 흐름을 정리합니다.',
-  },
-];
 
 export const resumeSections: ResumeSection[] = [
   {
@@ -429,4 +402,28 @@ export const highlights = [
   { label: 'Education', value: '홍익대학교 소프트웨어융합학과', icon: Award },
   { label: 'Cloud Training', value: '네이버 클라우드 데브옵스 13기', icon: Cloud },
   { label: 'Current Work', value: '뮤토스마트 Backend Developer', icon: Building2 },
+];
+
+export const fallbackBlogPosts: BlogPost[] = [
+  {
+    title: 'Spring Security와 JWT 인증 흐름 정리',
+    url: siteConfig.blogUrl,
+    publishedAt: 'Latest',
+    tags: ['Spring Security', 'JWT'],
+    summary: '백엔드 인증/인가를 공부하며 토큰 기반 인증 흐름과 보안 고려사항을 정리합니다.',
+  },
+  {
+    title: 'Docker와 Jenkins로 배포 자동화하기',
+    url: siteConfig.blogUrl,
+    publishedAt: 'Archive',
+    tags: ['Docker', 'Jenkins', 'DevOps'],
+    summary: '프로젝트에서 경험한 컨테이너 빌드, 이미지 배포, CI/CD 파이프라인 구성을 기록합니다.',
+  },
+  {
+    title: 'MSA 프로젝트에서 서비스 경계 나누기',
+    url: siteConfig.blogUrl,
+    publishedAt: 'Archive',
+    tags: ['MSA', 'Spring Cloud'],
+    summary: 'Eureka, Gateway, Config Server를 사용하며 배운 서비스 분리와 운영 흐름을 정리합니다.',
+  },
 ];
