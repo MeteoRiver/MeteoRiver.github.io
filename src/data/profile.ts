@@ -323,6 +323,16 @@ export const resumeSections: ResumeSection[] = [
     ],
   },
   {
+    title: '병역',
+    items: [
+      {
+        title: '대한민국 공군',
+        meta: '2022.04 - 2024.01',
+        description: '제38전투비행전대 정보보호병, 병장 만기전역',
+      },
+    ],
+  },
+  {
     title: '학력',
     items: [
       {
@@ -347,9 +357,14 @@ export const resumeSections: ResumeSection[] = [
         description: '한국산업인력공단 주관 정보처리기사 자격을 취득했습니다.',
       },
       {
-        title: 'NCA / NCP',
-        meta: '2024.11 - 2024.12',
-        description: '네이버 클라우드 관련 자격을 취득하며 클라우드 기반 운영 지식을 보완했습니다.',
+        title: 'NCA(Naver cloud platform Certified Associate)',
+        meta: '2024.11',
+        description: '네이버 클라우드 NCA 자격을 취득하며 클라우드 기반 운영 지식을 보완했습니다.',
+      },
+      {
+        title: 'NCP(Naver cloud platform CertifiedProfessional)',
+        meta: '2024.12',
+        description: '네이버 클라우드 NCP 자격을 취득하며 클라우드 기반 운영 지식을 보완했습니다.',
       },
       {
         title: 'SQLD',
